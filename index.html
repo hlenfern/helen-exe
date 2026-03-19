@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helen.exe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="vignette"></div>
+  <div class="scanlines"></div>
+  <div class="flashlight"></div>
+
+  <!-- TELA INICIAL -->
+  <section class="intro-screen" id="introScreen">
+    <div class="intro-box" id="introBox">
+      <div class="intro-header">
+        <span class="intro-dot"></span>
+        <span class="intro-dot"></span>
+        <span class="intro-dot"></span>
+      </div>
+
+      <p id="bootText" class="boot-text"></p>
+
+      <div class="name-area hidden" id="nameArea">
+        <p class="prompt">&gt; Digite seu nome para acessar o arquivo</p>
+
+        <div class="input-row">
+          <span class="prompt-mark">&gt;</span>
+          <input
+            type="text"
+            id="nameInput"
+            class="name-input"
+            placeholder="Seu nome"
+            maxlength="20"
+            autocomplete="off"
+          />
+        </div>
+
+        <button id="enterBtn" class="enter-btn">Entrar</button>
+      </div>
+
+      <div class="access-area hidden" id="accessArea">
+        <p class="access-line" id="accessLine1"></p>
+        <p class="access-line" id="accessLine2"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITE -->
+  <main class="site hidden" id="siteContent">
+    <header class="hero">
+      <div class="hero-fog"></div>
+
+      <div class="hero-content">
+        <img
+          src="C:\Users\helen\Desktop\euu\helen-eu.jpeg"
+          alt="Foto de Helen Fernandes"
+          class="profile-photo"
+        />
+
+        <p class="small-tag">ARQUIVO RESTAURADO</p>
+        <h1 class="glitch-title" id="welcomeTitle">Bem-vindo.</h1>
+        <p class="hero-subtitle">Eu sou Helen Fernandes</p>
+
+        <div class="status-bar">
+          <span>Front-end</span>
+          <span>Terror</span>
+          <span>Tecnologia</span>
+          <span>Criatividade</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="book-section">
+      <div class="book-card">
+        <div class="book-top">
+          <span class="book-label">Registro pessoal</span>
+          <span class="book-label">Perfil ativo</span>
+        </div>
+
+        <h2>Sobre mim</h2>
+
+        <p>
+          Sou Helen Fernandes, apaixonada por tecnologia, criatividade e pela
+          ideia de transformar código em experiências visuais marcantes.
+          Gosto de desenvolver interfaces com personalidade, unindo estética,
+          emoção e funcionalidade.
+        </p>
+
+        <p>
+          Tenho um carinho especial pelo universo de terror, por ambientes
+          misteriosos, jogos sombrios e tudo que transmite atmosfera e emoção.
+          Também amo gatos, gosto de nadar e de descobrir coisas novas dentro
+          da tecnologia.
+        </p>
+
+        <p>
+          Estou sempre buscando evoluir como desenvolvedora, aprendendo,
+          testando novas ideias e criando projetos que sejam bonitos,
+          interessantes e memoráveis. Quero construir experiências que não sejam
+          apenas vistas, mas sentidas.
+        </p>
+      </div>
+    </section>
+
+    <section class="missions-section">
+      <div class="section-header">
+        <span class="section-line"></span>
+        <h2>Missões</h2>
+        <span class="section-line"></span>
+      </div>
+
+      <div class="missions-grid">
+        <article class="mission-card">
+          <span class="mission-id">Missão 01</span>
+          <h3>Clone Spotify</h3>
+          <p>
+            Sistema visual inspirado em plataforma de música, com foco em
+            organização, interface e experiência do usuário.
+          </p>
+        </article>
+
+        <article class="mission-card">
+          <span class="mission-id">Missão 02</span>
+          <h3>Landing Page Brigadeiro</h3>
+          <p>
+            Projeto voltado para apresentação visual de produto, com layout
+            atrativo e comunicação direta.
+          </p>
+        </article>
+
+        <article class="mission-card">
+          <span class="mission-id">Missão 03</span>
+          <h3>Site Hospital</h3>
+          <p>
+            Interface criada para transmitir clareza, confiança e organização
+            das informações.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="music-section" id="musicSection">
+      <div class="section-header">
+        <span class="section-line"></span>
+        <h2>Trilha sonora</h2>
+        <span class="section-line"></span>
+      </div>
+
+      <div class="radio-shell">
+        <div class="radio-top">
+          <span class="radio-brand">OLD RADIO</span>
+          <span class="radio-status" id="radioStatus">DESLIGADO</span>
+        </div>
+
+        <div class="radio-screen">
+          <p class="radio-screen-text" id="radioText">
+            Frequência carregada. Pressione o botão para ligar.
+          </p>
+        </div>
+
+        <div class="radio-controls">
+          <button class="radio-btn" id="radioBtn">▶ Ligar Rádio</button>
+
+          <div class="radio-knobs">
+            <div class="knob"></div>
+            <div class="knob"></div>
+          </div>
+        </div>
+
+        <div class="spotify-box hidden" id="spotifyBox">
+          <iframe
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/33fLW0NK6oXpoCQ5mnt2dS"
+            width="100%"
+            height="152"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify player"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a
+        href="https://www.linkedin.com/in/helen-fernandes-534740140/"
+        target="_blank"
+        class="contact-btn"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="mailto:helenfernandez.hf@gmail.com"
+        class="contact-btn"
+      >
+        Email
+      </a>
+
+      <a
+        href="https://github.com/"
+        target="_blank"
+        class="contact-btn"
+      >
+        GitHub
+      </a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
